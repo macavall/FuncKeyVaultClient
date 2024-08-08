@@ -1,0 +1,15 @@
+{
+  "profiles": {
+    "KeyVaultFunc56": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7086"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker",
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}",
+      "DockerfileRunArguments": "--init",
+      "httpPort": 32783,
+      "useSSL": false
+    }
+  }
+}
