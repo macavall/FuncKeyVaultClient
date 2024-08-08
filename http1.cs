@@ -22,11 +22,17 @@ namespace KeyVaultFunc56
         {
             _logger.LogInformation("C# HTTP trigger function processed a request.");
 
+            // ========================
+            // ========================
+
             var client = new SecretClient(vaultUri: new Uri("https://macavallkv56.vault.azure.net/"), credential: new DefaultAzureCredential());
 
-            KeyVaultSecret secret = client.GetSecret("mysecret");
+            KeyVaultSecret secret = client.GetSecret("mysecret"); // Result should be "mysecretvalue"
 
-            return new OkObjectResult("Welcome to Azure Functions!");
+            // ========================
+            // ========================
+
+            return new OkObjectResult(secret);
         }
     }
 }
