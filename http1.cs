@@ -32,7 +32,7 @@ namespace KeyVaultFunc56
             // ========================
             // ========================
 
-            return new OkObjectResult(secret);
+            return new OkObjectResult(secret.Value);
         }
     }
 }
